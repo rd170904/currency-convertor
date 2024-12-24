@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic Currency Converter</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 50px;
+      background: linear-gradient(to left, rgb(62, 62, 106),rgb(173, 79, 164),rgb(52, 117, 117)  );
+    }
+    select, input {
+      margin: 10px;
+      padding: 10px;
+      font-size: 16px;
+      background-color: #a9ac95;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #6094b0;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #177eb5;
+    }
+    .result {
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>Dynamic Currency Converter</h1>
+  <b><input type="number" id="amount" placeholder="Enter amount"/></b>
+  <select id="fromCurrency">
+    <option value="USD">USD</option>
+    <option value="EUR">EUR</option>
+    <option value="INR">INR</option>
+    <option value="GBP">GBP</option>
+    <option value="AUD">AUD</option>
+  </select>
+  <select id="toCurrency">
+    <option value="USD">USD</option>
+    <option value="EUR">EUR</option>
+    <option value="INR">INR</option>
+    <option value="GBP">GBP</option>
+    <option value="AUD">AUD</option>
+  </select>
+  <button onclick="convertCurrency()">Convert</button>
+  <div class="result" id="result"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
